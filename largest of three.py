@@ -3,7 +3,7 @@ b = int(input("Enter the second number: "))
 c = int(input("Enter the third number: "))
 if a > b and a > c:
     print("The largest number is:", a)
-elif b > c:
+elif b > c and a > c:
     print("The largest number is:", b)
 else:
     print("The largest number is:",c)
