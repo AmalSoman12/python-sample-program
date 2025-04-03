@@ -333,6 +333,171 @@ Use Cases: Useful when accessing the last elements without knowing the exact len
 
 
 
+module 3 
+
+
+
+ Explain the attributes and methods of turtle object.
+
+Attributes:
+
+1. position() - Provides a tuple of coordinates as the current position of the turtle.
+
+
+2. heading() - Returns the current heading angle of the turtle in degrees.
+
+
+3. color() - Returns a tuple of RGB values representing the turtle’s current color.
+
+
+4. pensize() - Returns the current pensize of the turtle.
+
+
+5. speed() - Returns the current speed of the turtle.
+
+
+
+Methods:
+
+1. forward(distance) - Moves the turtle forward by a given distance.
+
+
+2. backward(distance) - Moves the turtle backward by a given distance.
+
+
+3. right(angle) - Turns the turtle right by a given angle.
+
+
+4. left(angle) - Turns the turtle left by a given angle.
+
+
+5. penup() - Raises the turtle pen so that it doesn’t draw while moving.
+
+
+6. pendown() - Puts the turtle pen down so that it can draw.
+
+
+7. setposition(x, y) - Sets the turtle’s position to given coordinates.
+
+
+8. dot(size, color) - Draws a dot of a given size and color.
+
+
+
+
+
+Steps to create a GUI application using Tkinter
+
+1. Import Tkinter as tk.
+
+import tkinter as tk
+
+
+2. Create a main window.
+
+root = tk.Tk()
+
+
+3. Set window properties such as title, size, and background color.
+
+root.geometry("400x300")
+
+
+4. Create widgets such as labels, buttons, textboxes, etc.
+
+
+
+
+ Convert a color image to a grayscale image
+
+Using the PIL (Python Imaging Library) module:
+
+from PIL import Image  
+image = Image.open("color_image.jpg")  
+gray_image = image.convert("L")  
+gray_image.save("gray_image.jpg")
+
+
+
+
+
+
+ Explain different types of window components
+
+1. Labels - Display static text, images, etc.
+
+
+2. Entry - Input field for user text.
+
+
+3. Buttons - Perform actions on click.
+
+
+4. Frames - Contain and align objects.
+
+
+
+
+
+
+Convert an image to black and white
+
+Using the PIL module:
+
+from PIL import Image  
+image = Image.open("image.jpg")  
+bw_image = image.convert("1")  
+bw_image.show()
+
+
+
+
+Explain different methods and PIL module commonly used for converting a color image to a grayscale image
+
+Methods:
+
+1. Average method - Takes the average of the red, green, and blue (RGB) values.
+\text{gray} = \frac{R + G + B}{3}
+
+2. Weighted Method
+
+Humans are more sensitive to green, so a weighted formula is used:
+
+\text{gray} = (0.2989 \times R) + (0.5870 \times G) + (0.1140 \times B)
+
+3. Lightness Method
+
+This method takes the mean of the maximum and minimum of the RGB values:
+
+\text{gray} = \frac{\max(R,G,B) + \min(R,G,B)}{2}
+
+
+
+
+Modules for Grayscale Conversion
+
+1. OpenCV Method
+
+Using OpenCV in Python to convert a color image to grayscale:
+
+import cv2  
+image = cv2.imread("image.jpg")  
+gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)  
+cv2.imwrite("gray_image.jpg", gray)
+
+2. PIL Method
+
+The Pillow module provides a method (convert("L")) that applies grayscale conversion.
+Example:
+
+from PIL import Image  
+image = Image.open("image.jpg")  
+gray_image = image.convert("L")  
+gray_image.show()
+
+
+
+
 
 
 
