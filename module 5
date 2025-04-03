@@ -281,54 +281,7 @@ print("CSV file 'student.csv' created successfully!")
 CSV file 'student.csv' created successfully!
 """Consider the above  
 file with fields Name, Branch, Year, CGPA .  
-Write python code using pandas to 
-1) To find the average CGPA of the students 
-2) To display the details of all students having CGPA > 9
-3) To display the details of all CSE students with CGPA > 9
-4) To display the details of student with maximum CGPA
-5) To display average CGPA of each branch 5) To display average CGPA of each branch o display average CGPA of each branch   answer in structured format"""
 
-import pandas as pd
-
-df = pd.read_csv("student.csv")
-
-df['CGPA'] = df['CGPA'].astype(float)
-
-average_cgpa = df['CGPA'].mean()
-print("Average CGPA:", average_cgpa)
-9
-high_cgpa_students = df[df['CGPA'] > 9]
-print("\nStudents with CGPA > 9:\n", high_cgpa_students)
-
-cse_high_cgpa_students = df[(df['Branch'] == 'CSE') & (df['CGPA'] > 9)]
-print("\nCSE Students with CGPA > 9:\n", cse_high_cgpa_students)
-
-max_cgpa_student = df[df['CGPA'] == df['CGPA'].max()]
-print("\nStudent with Maximum CGPA:\n", max_cgpa_student)
-
-average_cgpa_by_branch = df.groupby("Branch")['CGPA'].mean()
-print("\nAverage CGPA by Branch:\n", average_cgpa_by_branch)
-Average CGPA: 8.975000000000001
-
-Students with CGPA > 9:
-       Name Branch  Year  CGPA
-1  Sanchit    CSE     2   9.1
-2   Aditya     IT     2   9.3
-3    Sagar     IT     1   9.5
-
-CSE Students with CGPA > 9:
-       Name Branch  Year  CGPA
-1  Sanchit    CSE     2   9.1
-
-Student with Maximum CGPA:
-     Name Branch  Year  CGPA
-3  Sagar     IT     1   9.5
-
-Average CGPA by Branch:
- Branch
-CSE    8.55
-IT     9.40
-Name: CGPA, dtype: float64
 """Q. Consider a CSV file ‘weather.csv’ with the following columns (date,temperature, humidity, windSpeed, precipitationType, place, weather {Rainy,  Cloudy, Sunny}).
 Write commands to do the following using Pandas library. 
 1. Print first 10 rows of weather data. 
