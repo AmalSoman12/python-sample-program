@@ -1,0 +1,563 @@
+Module 1
+
+
+
+
+Previous Year Theory Questions
+1.Let the variable x be "dog" and the variable y be "cat". Write the values returned by the following operations: - [May 2024] (3)
+ a) x*4 + ' ' + 4*y 	b) x*len(x+y)
+ANS:
+a.	dogdogdogdog catcatcatcat
+b.	dogdogdogdogdogdog
+
+2.What will be the output if the following code fragments are executed? - [May 2024] (3)
+for j in range(2,10,4):
+print(j)
+ANS:
+2
+6
+3.Jack says that he will not bother with analysis and design but proceed directly to coding his programs. Why is that not a good idea? - [June 2023] (3)
+ANS:
+Skipping analysis and design to jump directly into coding is a poor practice because it often leads to misunderstandings of user requirements, inefficient and disorganized code, and increased debugging and maintenance efforts. Without proper planning, the software may lack scalability, flexibility, and clarity, resulting in higher development costs and poor user experiences. Analysis and design provide a blueprint for building reliable, maintainable, and efficient systems, ultimately saving time and resources in the long run.
+
+4.Write the output of the following python statements :
+i) round(12.57) ii) 5//2 iii) int(6.5) - [June 2023] (3)
+ANS:
+i) 	13
+ii) 	2
+iii) 	6
+
+
+5.What is the output of the following print statement in Python?
+(a) print (9//2) (b) print (9/2) - [June 2022] (3)
+ANS:	
+a.	4
+b.	4.5
+
+6.What is the output of the following Python code. Justify your answer. - [May 2023] (3)
+x = 'abcd'
+for i in range(len(x)):
+print(i)				
+ANS:
+0
+1
+2
+3
+7.Enumerate the various selection structures and control statement types in Python and elucidate each with suitable examples. - [May 2024] (8)
+ANS:
+
+i)if Statement
+•	The if statement is used to execute a block of code only if a specified condition evaluates to True. If the condition is False, the block is skipped.
+•	Example
+age = 18
+if age >= 18:
+    print("You are an adult.")
+ii)if-else Statement
+•	The if-else statement allows you to specify an alternative block of code to execute when the condition evaluates to False. If the condition is True, the first block runs; otherwise, the second block runs.
+•	Example:
+age = 16
+if age >= 18:
+    print("You are an adult.")
+else:
+    print("You are a minor.")
+iii)if-elif-else Statement
+•	The if-elif-else statement provides multiple conditions to test. It evaluates the conditions sequentially and executes the block corresponding to the first True condition. If none of the conditions are True, the else block is executed.
+
+
+•	Example:
+age = 70
+if age < 18:
+    print("You are a minor.")
+elif age < 60:
+    print("You are an adult.")
+else:
+    print("You are a senior citizen.")
+iv)Ternary Operator (Conditional Expression)
+•	The ternary operator in Python allows you to assign a value based on a condition in a single line. It follows the syntax: value_if_true if condition else value_if_false.
+•	Example:
+age = 20
+status = "Adult" if age >= 18 else "Minor"
+print(status)
+v)assert Statement
+•	The assert statement is used to test if a condition is True. If the condition is False, it raises an AssertionError exception. This is typically used for debugging or testing purposes.
+•	Example:
+
+
+age = 25
+assert age >= 18, "Age must be 18 or older"
+8.Discuss the steps involved in the waterfall model of software development process with the help of a neat diagram. 
+- [January 2024] (8)
+ANS:
+Waterfall Model
+ 
+Requirements Definition:
+•	In this initial phase, detailed requirements for the software are gathered by interacting with stakeholders and analyzing user needs.
+•	The requirements are documented and serve as the foundation for the entire development process.
+•	No development begins until all requirements are clearly defined and approved.
+System and Software Design:
+•	Based on the gathered requirements, system architecture and design specifications are created.
+•	This includes designing data structures, algorithms, user interfaces, and overall system architecture.
+•	The design guides the development team in implementing the software correctly.
+Implementation and Unit Testing:
+•	The system design is divided into modules, and coding begins.
+•	Developers implement the software modules and individually test each module for functionality using unit tests.
+•	Unit testing ensures that each part works as expected before integrating them.
+Integration and System Testing:
+•	Once individual modules are coded and tested, they are integrated into a complete system.
+•	The system undergoes thorough testing to ensure that all components work together as intended.
+•	System testing validates the software against the initial requirements.
+Operation and Maintenance:
+•	After successful testing, the software is deployed to the production environment and made available to users.
+•	Maintenance includes fixing bugs, improving performance, and making updates as required to ensure the system continues to meet user needs.
+
+9.Illustrate the use of range() in Python.- [January 2024] (6)
+ANS:
+The range() function in Python is a versatile tool used to generate a sequence of numbers, making it particularly useful for loops and iterations. It can accept up to three arguments: the starting point, the stopping point, and an optional step value to determine the interval between numbers in the sequence. By default, the sequence starts at zero and increments by one if no additional parameters are provided. When a step value is specified, the sequence can either increase or decrease accordingly, allowing for flexible iteration patterns. This function ensures efficient looping and enables developers to manage iteration ranges without manually creating lists or sequences..
+	i)Basic Usage:
+Generates numbers from 0 to stop - 1.
+for i in range(5):
+print(i)
+
+ii)Specifying Start and Stop:
+Generates numbers from start to stop - 1.
+for i in range(2, 6):
+print(i)
+
+iii)Using a Step Value:
+Generates numbers incrementing by step.
+for i in range(1, 10, 2):
+print(i)
+
+	iv)Negative Step Value:
+Generates numbers in descending order.
+for i in range(10, 0, -2): 
+print(i)
+
+10.Mention the different types of loop and control statements allowed in Python and explain each type with suitable examples.
+- [June 2022] (8)
+ANS:
+Loops in Python
+	i) for Loop
+*Used to iterate over a sequence (like lists, strings, or ranges).
+*Executes the block of code once for each element in the sequence.
+Example:
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits: 
+print(fruit)
+	ii) while Loop
+		*Repeats a block of code as long as a specified condition is true.
+		Example:
+		count = 1 
+while count <= 5: 
+print(count) 
+count += 1
+Control Statements in Python
+	Control statements alter the flow of a loop or skip parts of a block of code.
+	i) break statement
+		*Terminates the current loop and resumes execution at the next statement.
+		Example:
+		for fruit in ["apple", "banana", "cherry"]: 
+if fruit == "banana": 
+break 
+print(fruit)
+	ii) continue statement
+		*Skips the remaining code inside the loop for the current iteration and moves to the next iteration.
+		Example:
+for fruit in ["apple", "banana", "cherry"]:
+    			if fruit == "banana":
+        				continue
+    		print(fruit)
+	iii) pass statement
+*Does nothing; acts as a placeholder for future code. 
+Example:
+for fruit in ["apple", "banana", "cherry"]:
+if fruit == "banana":
+pass  # Placeholder
+    	print(fruit)
+
+11.Write the syntax and semantics of the multiway-if statement.
+ANS:
+Python uses if-elif-else to achieve multi-branch decision-making. The syntax allows checking multiple conditions sequentially and executing corresponding code blocks.
+
+Syntax
+if condition1:
+    # Code block executed if condition1 is True
+    statement1
+elif condition2:
+    # Code block executed if condition2 is True
+    statement2
+elif condition3:
+    # Code block executed if condition3 is True
+    statement3
+else:
+    # Code block executed if no condition is True
+    statement4
+
+Semantics
+1.	Condition Evaluation:
+o	Each condition is evaluated from top to bottom.
+o	The first condition that evaluates to True executes its associated block.
+o	Subsequent conditions are ignored once a True condition is found.
+2.	Single Execution Path:
+o	Only one block of code runs even if multiple conditions are True.
+3.	Optional elif and else:
+o	The elif and else clauses are optional.
+o	There can be zero or more elif clauses, but at most one else clause.
+
+
+12.Explain type conversion with an example.
+ANS:
+Type conversion in Python refers to converting one data type into another, either implicitly or explicitly. Implicit conversion (type coercion) happens automatically when Python converts a smaller data type to a larger one, such as converting an integer to a float during arithmetic operations. Explicit conversion (type casting) uses functions like int(), float(), or str() to convert data manually.
+Example: Implicit conversion
+num = 5
+result = num + 2.5  
+print(result)  
+
+Example: Explicit conversion
+age = "25"
+age_int = int(age)
+print(age_int + 5)
+
+
+
+
+
+module 2 
+
+
+
+
+Q.Describe the concept of recursive function in Python with suitable example.
+
+A recursive function is a function that calls itself within its definition to solve a problem by breaking it down into smaller subproblems of the same type. It consists of two main components:
+
+Base Case – The condition that stops the recursion.
+
+Recursive Case – The function calls itself with a smaller subproblem.
+
+Example: Factorial def factorial(n): if n == 0 or n == 1: # Base case return 1 else: return n * factorial(n - 1) # Recursive case
+
+Reduces complex problems into smaller subproblems.
+
+Requires a base case to avoid infinite recursion.
+
+Commonly used in tree traversals, mathematical computations, and solving problems like Fibonacci sequence.
+
+Q.Explain how to read numeric values from a file, perform some operations, and then write the results back to the file?
+
+To read numeric values from a file, perform operations, and write the results back:
+
+Steps Involved: 1.Read the numeric values from the file. 2.Perform necessary calculations (e.g., sum, average, square). 3.Write the processed results back to the file.
+
+Step 1: Read numbers from file with open("numbers.txt", "r") as file: numbers = [int(line.strip()) for line in file] # Convert each line to an integer
+
+Step 2: Perform some operations sum_values = sum(numbers) average_value = sum_values / len(numbers) if numbers else 0
+
+Step 3: Write the results back to file with open("results.txt", "w") as file: file.write(f"Sum: {sum_values}\n") file.write(f"Average: {average_value}\n")
+
+Q.Compare and contrast the fundamental characteristics and use cases of lists,tuples, and sets in Python.
+
+Lists A list is an ordered, mutable collection that allows duplicate elements. Lists are widely used for storing sequences of items where modification, indexing, and iteration are required.
+Characteristics: Ordered (maintains the insertion order). Mutable (can be modified after creation). Allows duplicate elements. Supports indexing and slicing.
+
+Tuples A tuple is an ordered, immutable collection that allows duplicate elements. Tuples are useful when data should remain unchanged throughout the program.
+Characteristics: Ordered (maintains the insertion order). Immutable (cannot be modified after creation). Allows duplicate elements. Supports indexing and slicing. More memory-efficient and faster than lists.
+
+Sets A set is an unordered collection that contains unique elements. Sets are useful when only distinct values are needed and when order does not matter.
+Characteristics: Unordered (does not maintain the insertion order). Mutable (can add or remove elements, but elements must be immutable). Does not allow duplicate elements. Does not support indexing or slicing.
+
+Q.Differentiate between lists and tuples with the help of examples.
+
+Definition List: A list is an ordered, mutable collection of elements.
+Tuple: A tuple is an ordered, immutable collection of elements.
+
+Syntax List: Defined using square brackets []. eg: my_list = [1, 2, 3, 4]
+Tuple: Defined using parentheses (). eg: my_tuple = (1, 2, 3, 4)
+
+Mutability List: Mutable (can be modified). eg: my_list[1] = 10 # Allowed print(my_list) # Output: [1, 10, 3, 4]
+Tuple: Immutable (cannot be modified). eg: my_tuple[1] = 10 # TypeError: 'tuple' object does not support item assignment
+
+Performance List: Slightly slower due to mutability.
+Tuple: Faster than lists due to immutability.
+
+Memory Usage List: Requires more memory since it supports dynamic modifications.
+Tuple: More memory-efficient.
+
+Allowing Duplicates Both lists and tuples allow duplicate elements. eg: my_list = [1, 2, 2, 3] my_tuple = (1, 2, 2, 3)
+Use Cases Lists: Suitable for data that may change, such as a list of student names.
+Tuples: Suitable for fixed data, such as coordinates (latitude, longitude).
+
+Q.Illustrate the use of any four dictionary methods
+
+keys() Method Purpose: Returns a view object containing all keys in the dictionary. Example: student = {"name": "John", "age": 20, "grade": "A"} print(student.keys())
+
+values() Method Purpose: Returns a view object containing all values in the dictionary. Example: print(student.values())
+
+items() Method Purpose: Returns a view object containing key-value pairs as tuples. Example: print(student.items()) l when iterating over both keys and values.
+
+get() Method Purpose: Retrieves the value for a specified key without raising an error if the key is missing. Example: print(student.get("age")) # Output: 20 print(student.get("address", "Not Found")) # Output: Not Found
+
+Q. Explain the concepts namespace, scope, and lifetime in the case of Python programming language.
+
+a) Namespace A namespace is a collection of names (variables, functions, objects) mapped to their values. It ensures unique identification of objects to avoid conflicts.
+
+Example: x = 10 # 'x' is stored in the global namespace
+
+b) Scope Scope defines the region where a variable can be accessed. Types of scope: Local Scope – Variables declared inside a function. Global Scope – Variables declared outside a function. Enclosing Scope – Variables in outer functions in nested functions. Built-in Scope – Variables from Python’s built-in functions.
+
+Example: def func(): local_var = 5 # Local scope print(local_var) func()
+
+c) Lifetime The duration a variable remains in memory. Global variables exist throughout the program, while local variables exist only during function execution.
+
+Example: def example(): temp_var = "Hello" # Exists only inside function
+
+Q.What are mutable and immutable properties in the case of Python data structures? Give one example each for mutable and immutable data structures in Python.
+
+a) Mutable Data Structures Mutable objects can be modified after creation. Example: List my_list = [1, 2, 3] my_list.append(4) # Modifying the list print(my_list) # Output: [1, 2, 3, 4]
+
+b) Immutable Data Structures Immutable objects cannot be modified after creation.
+
+Example: Tuple my_tuple = (1, 2, 3) my_tuple[1] = 4 # TypeError: 'tuple' object does not support item assignment
+
+Q.Illustrate the use of negative indexing of list with example.
+
+Negative indexing allows accessing elements from the end of a list. The last element has an index of -1, the second last -2, and so on.
+
+Syntax: list_name[-index]
+
+Example: my_list = [10, 20, 30, 40, 50] Accessing elements using negative indexing print(my_list[-1]) # Output: 50 (last element) print(my_list[-2]) # Output: 40 (second last element) print(my_list[-3]) # Output: 30
+
+Slicing with Negative Indexing: print(my_list[-3:]) # Output: [30, 40, 50] (elements from index -3 to end) print(my_list[:-2]) # Output: [10, 20, 30] (excluding last two elements)
+
+Use Cases: Useful when accessing the last elements without knowing the exact length of the list. Helps in reverse traversal of a list efficiently.
+
+
+
+
+
+
+module 5
+
+
+Q.How do you assign a random number to a variable in Python?
+
+Assigning a Random Number to a Variable in Python
+
+Using the random module:
+
+import random num = random.randint(1, 100) # Assigns a random integer between 1 and 100 print(num)
+
+Using random.uniform() for floating-point numbers:
+
+num = random.uniform(1, 100) # Assigns a random float between 1 and 100 print(num)
+
+Using random.random() for a random float between 0 and 1: num = random.random() # Assigns a random float between 0 and 1 print(num)
+
+Q.What is the use of os module in python?
+
+Use of os Module in Python
+The os module provides functions for interacting with the operating system.
+
+File and Directory Management:
+
+os.mkdir('new_folder') → Creates a new directory
+os.listdir() → Lists files and directories in the current directory
+os.remove('file.txt') → Deletes a file
+Path Operations:
+
+os.getcwd() → Returns the current working directory
+os.path.join('folder', 'file.txt') → Joins paths correctly for different OS
+System Operations:
+
+os.system('ls') → Executes a system command (e.g., listing files in Linux)
+os.getenv('HOME') → Retrieves environment variables
+Q.Explain how matrix multiplications are done using NumPy arrays.
+
+Matrix Multiplication using NumPy Arrays Matrix multiplication in NumPy can be performed using:
+
+The dot() function
+The @ operator
+The matmul() function
+Example: import numpy as np
+
+A = np.array([[1, 2], [3, 4]]) B = np.array([[5, 6], [7, 8]])
+
+Method 1: Using dot() result1 = np.dot(A, B)
+
+Method 2: Using @ operator result2 = A @ B
+
+Method 3: Using matmul() result3 = np.matmul(A, B)
+
+print(result1)
+
+Q.How to plot two or more lines on the same plot with suitable legends, labels, and a title.
+
+Plotting Multiple Lines on a Single Graph Using Matplotlib, multiple lines can be plotted on a single graph:
+
+import matplotlib.pyplot as plt
+
+x = [1, 2, 3, 4, 5] y1 = [2, 4, 6, 8, 10] y2 = [1, 3, 5, 7, 9]
+
+plt.plot(x, y1, label="Line 1", color="red", linestyle="dashed") plt.plot(x, y2, label="Line 2", color="blue", linestyle="solid")
+
+plt.xlabel("X-axis Label") plt.ylabel("Y-axis Label") plt.title("Multiple Lines Plot") plt.legend() plt.show()
+
+Q.Write a Python code that checks to see, if a file with the given pathname exists on the disk, before attempting to open a file for input.
+
+Using os.path.exists() import os
+
+file_path = "example.txt"
+
+if os.path.exists(file_path): with open(file_path, "r") as file: content = file.read() print(content) else: print("File does not exist.")
+
+Using pathlib (Recommended for Modern Python Versions) from pathlib import Path
+
+file_path = Path("example.txt")
+
+if file_path.is_file(): with file_path.open("r") as file: content = file.read() print(content) else: print("File does not exist.")
+
+3.Using try-except Block try: with open("example.txt", "r") as file: content = file.read() print(content) except FileNotFoundError: print("File does not exist.")
+
+Q.What is Flask in Python? What are its basic components?
+
+Flask is a lightweight and micro web framework in Python used for building web applications. It is designed to be simple, yet flexible, making it a popular choice for small to medium-sized web projects.
+
+Basic Components of Flask
+
+Flask Application Object
+
+Created using Flask(__name__) to define the web application.
+from flask import Flask
+app = Flask(name)
+Routes & Views
+
+Defines URL routes and their associated view functions.
+@app.route("/")
+def home():
+return "Hello, Flask!"
+Templates & Jinja2
+
+Supports HTML templates using Jinja2 templating engine.
+Hello, {{ name }}!
+Request Handling
+
+Handles GET and POST requests.
+from flask import request
+
+@app.route("/submit", methods=["POST"])
+def submit():
+data = request.form["name"]
+return f"Hello, {data}!"
+
+Flask Extensions
+
+Includes extensions for databases, authentication, and more (e.g., Flask-SQLAlchemy, Flask-Login).
+Development Server
+
+Run the application using:
+if name == "main":
+app.run(debug=True)
+
+Q.write the output of the following python code import numpy as np import numpy as np arr1 = np.arange(6).reshape((3, 2)) arr2 = np.arange(6).reshape((3,2)) arr3 = arr1 + arr2[0].reshape((1, 2))
+print(arr3)
+
+arr1 = np.arange(6).reshape((3, 2))
+
+[[0 1] [2 3] [4 5]]
+
+arr2 = np.arange(6).reshape((3, 2))
+
+[[0 1] [2 3] [4 5]]
+
+arr2[0].reshape((1,2)) [[0 1]]
+
+addition [[0+0 1+1] => [0 2] [2+0 3+1] => [2 4] [4+0 5+1]] => [4 6] o/p: [[0 2] [2 4] [4 6]]
+
+Q.What is the difference between loc and iloc in pandas DataFrame.
+
+loc is label-based indexing, meaning it selects data using row and column labels. It includes the end index when slicing.
+
+Example: df.loc[2, 'Name'] selects the value from row index 2 and column 'Name'.
+
+iloc is integer-based indexing, meaning it selects data using numerical positions. It excludes the end index when slicing.
+
+Example: df.iloc[2, 1] selects the value from row index 2 and column index
+
+Q. Explain the attributes of an ndarray object.
+
+An ndarray (N-dimensional array) is the core data structure in NumPy. It has several attributes that provide information about the array:
+
+ndarray.shape
+
+Returns a tuple representing the dimensions of the array.
+Example: arr.shape for a 3x2 array → (3, 2).
+ndarray.ndim
+
+Returns the number of dimensions (axes) in the array.
+Example: A 2D array has ndim = 2.
+ndarray.size
+
+Returns the total number of elements in the array.
+Example: A 3x2 array has size = 6.
+ndarray.dtype
+
+Specifies the data type of the elements in the array.
+Example: int32, float64, etc.
+ndarray.itemsize
+
+Returns the size (in bytes) of each element in the array.
+Example: int32 elements have an item size of 4 bytes.
+ndarray.data
+
+Returns a buffer containing the actual array elements in memory.
+Q. Explain the use of flask in web development. write in structured format
+
+Flask is a lightweight Python web framework used for building web applications. It provides tools and libraries to develop web services efficiently.
+
+Key Features of Flask
+Lightweight and Minimalistic – Uses a simple structure without enforcing project layouts.
+Built-in Development Server – Helps test applications without an external web server.
+Jinja2 Templating – Allows dynamic HTML rendering.
+Integrated Routing System – Maps URLs to Python functions easily.
+Support for Extensions – Can integrate with databases, authentication, and APIs.
+Basic Flask Web Application Example
+from flask import Flask
+
+app = Flask(name)
+
+@app.route("/") def home(): return "Hello, Flask!"
+
+if name == "main": app.run(debug=True)
+
+Flask(__name__) – Creates an instance of the Flask application.
+@app.route("/")– Maps the home page (/) to a function.
+app.run(debug=True) – Runs the server with debug mode enabled.
+Common Uses of Flask
+Developing APIs – RESTful web services for mobile and web applications.
+Building Web Applications – Used in dashboards, blogs, and business applications.
+Machine Learning Deployment – Hosts ML models as APIs for real-time inference.
+Q.Explain the different ways by which numpy arrays are created.
+
+Using np.array() import numpy as np arr = np.array([1, 2, 3, 4, 5]) print(arr) Creates an array from a list.
+
+Using np.arange() arr = np.arange(1, 10, 2) print(arr) Creates an array with a range of numbers (start, stop, step).
+
+Using np.zeros() and np.ones()
+
+zeros_arr = np.zeros((3, 3)) ones_arr = np.ones((2, 4)) print(zeros_arr) print(ones_arr) Creates arrays filled with zeros or ones. 4. Using np.linspace()
+
+arr = np.linspace(0, 1, 5) print(arr) Creates an array with evenly spaced values between start and stop.
+
+Using np.random (Random Arrays) rand_arr = np.random.rand(3, 3) print(rand_arr) Creates a random array of shape (3,3) with values between 0 and 1.
+
+Using np.eye() identity_matrix = np.eye(3) print(identity_matrix) Creates an identity matrix of size 3x3.
+
+Q.How does isnull() function in Pandas help in handling missing values?
+
+The isnull() function in Pandas is used to detect missing or NaN (Not a Number) values in a DataFrame or Series. It helps in data cleaning and preprocessing.
+
+Key Features of isnull() Identifies Missing Values: Returns True for missing values and False for non-missing values.
+
+Works on DataFrames & Series: Can be applied to both rows and columns.
+
+Used for Data Cleaning: Helps filter or replace missing data.
