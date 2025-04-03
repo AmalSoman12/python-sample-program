@@ -2,7 +2,6 @@ Module 1
 
 
 
-
 Previous Year Theory Questions
 1.Let the variable x be "dog" and the variable y be "cat". Write the values returned by the following operations: - [May 2024] (3)
  a) x*4 + ' ' + 4*y 	b) x*len(x+y)
